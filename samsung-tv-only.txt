@@ -1,0 +1,25 @@
+# Samsung Tizen TV - OPTIONAL, assign ONLY to a Pi-hole group containing the TV.
+# These domains are used by phones / other devices too: never in the Default group.
+# Source: Pi-hole query review 2026-09-09.
+
+# Samsung TV Plus (FAST channels: lineup, EPG, logos, images)
+||samsungcloud.tv^
+||samsungtv.plus^
+
+# Smart Hub push notifications / Ambient Mode feeds / notices / promos
+||gld.push.samsungosp.com^
+||noticecdn.samsungcloudsolution.com^
+
+# SmartThings hub role of the TV (phones' SmartThings app uses the same host)
+||api.smartthings.com^
+
+# Built-in Netflix / Prime Video / YouTube apps heartbeat at every boot
+||netflix.com^
+||nflximg.com^
+||nflxso.net^
+||nflxvideo.net^
+||nflxext.com^
+||amazonvideo.com^
+||youtube.com^
+||googlevideo.com^
+||ytimg.com^

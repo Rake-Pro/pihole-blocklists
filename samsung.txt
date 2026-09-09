@@ -1,0 +1,37 @@
+# Samsung Tizen TV - ACR / telemetry / ad-tech / app beacons
+# Format: Pi-hole ABP-style (||domain^ = domain + all subdomains).
+# Safe to apply to ALL clients. Nothing here serves firmware, time, HDMI or CEC.
+# Source: Pi-hole query review 2026-09-09, 75 days of TV traffic.
+
+# ACR (Samsung "Viewing Information Services") - none of these were queried in
+# 75 days (ACR looks already disabled on the set); listed pre-emptively.
+||samsungacr.com^
+||acr0.samsungcloudsolution.com^
+||acr-eu-prd.samsungcloud.tv^
+||samsungrm.net^
+
+# Log collection / device telemetry (.net is the log-collector zone; .com hosts time/cdn/firmware and stays open)
+||samsungcloudsolution.net^
+||dc.di.atlas.samsung.com^
+||vd.ct.svcsp.net^
+
+# Samsung Ads (TV Plus ad logs, RTB config, creative/thumbnail CDN)
+||samsungads.com^
+||samsungadhub.com^
+||samsungnyc.com^
+||adgear.com^
+
+# Prime Video / Amazon app telemetry beacons
+||unagi-na.amazon.com^
+||unagi.amazon.com^
+||minerva.devices.a2z.com^
+||telemetry.insights.video.a2z.com^
+
+# Netflix device logging (any Netflix client)
+||nrdp.logs.netflix.com^
+||logs.netflix.com^
+||ichnaea.netflix.com^
+||customerevents.netflix.com^
+
+# App-side analytics seen from this TV
+||insights-collector.newrelic.com^
