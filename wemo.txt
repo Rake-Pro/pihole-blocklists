@@ -1,0 +1,9 @@
+# Belkin Wemo - cloud relay / heartbeat beacons
+# Belkin ended cloud support for legacy Wemo devices on 2026-01-31; local control
+# (Home Assistant wemo integration, pywemo) never used these hosts.
+# Observed: one Wemo plug issuing ~36 DNS queries/min to nat.wemo2.com (2.9M in 75 days).
+# Safe to apply to ALL clients: only Wemo firmware talks to these domains.
+||wemo2.com^
+||wemo.com^
+||xbcs.net^
+||lswf.net^

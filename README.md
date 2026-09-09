@@ -9,12 +9,13 @@ Pi-hole adlists maintained for the rake.pro homelab. ABP-style entries (`||domai
 | `lgtv.txt` | LG webOS TV: ACR, ads, telemetry, ThinQ cloud, log upload. Safe for all clients. | `https://raw.githubusercontent.com/Rake-Pro/pihole-blocklists/main/lgtv.txt` |
 | `lgtv-tv-only.txt` | LG webOS TV: Hue discovery + built-in Netflix/Prime heartbeats. **TV group only.** | `https://raw.githubusercontent.com/Rake-Pro/pihole-blocklists/main/lgtv-tv-only.txt` |
 | `samsung.txt` | Samsung Tizen TV: ACR, log collection, Samsung Ads, Prime/Netflix beacons. Safe for all clients. | `https://raw.githubusercontent.com/Rake-Pro/pihole-blocklists/main/samsung.txt` |
+| `wemo.txt` | Belkin Wemo cloud relay/heartbeat (dead cloud since 2026-01). Safe for all clients. | `https://raw.githubusercontent.com/Rake-Pro/pihole-blocklists/main/wemo.txt` |
 | `samsung-tv-only.txt` | Samsung Tizen TV: TV Plus, Smart Hub push, SmartThings, built-in Netflix/Prime/YouTube. **TV group only.** | `https://raw.githubusercontent.com/Rake-Pro/pihole-blocklists/main/samsung-tv-only.txt` |
 
 ## How to add (Pi-hole v6)
 
 - Lists -> Add. Type must be **Block** (the default in the UI is Allow on some builds - check the toggle). An allow-type copy parses 0 domains and does nothing.
-- `lgtv.txt`, `samsung.txt`: group `Default`.
+- `lgtv.txt`, `samsung.txt`, `wemo.txt`: group `Default`.
 - `*-tv-only.txt`:
   - Groups -> one group for smart TVs (e.g. `smart-tvs`).
   - Clients -> add each TV by MAC (covers IPv4 + IPv6), groups `Default` + `smart-tvs`. Keeping `Default` is required or gravity stops applying to the TV.
