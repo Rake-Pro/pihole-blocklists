@@ -38,4 +38,3 @@
 
 # Universal Electronics (QuickSet/Nevo) IoT hub - TV pushes device inventory
 ||nevoai-iothub-57-prod.azure-devices.net^
-/^nevoai-iothub-\d+-prod\.azure-devices\.net$/
