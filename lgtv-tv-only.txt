@@ -1,0 +1,15 @@
+# LG webOS TV - OPTIONAL, assign ONLY to a Pi-hole group containing the TV.
+# These domains are legitimately used by other devices (phones, Apple TV):
+# do NOT put this list in the Default group.
+# Source: Pi-hole query review 2026-09-09.
+
+# Philips Hue bridge discovery (webOS Home Dashboard polls every ~15 min).
+# Blocking globally breaks the Hue app's bridge discovery on phones.
+||discovery.meethue.com^
+
+# Built-in Netflix / Prime Video apps heartbeat at every boot even when unused.
+||netflix.com^
+||nflximg.com^
+||nflxso.net^
+||nflxvideo.net^
+||amazonvideo.com^

@@ -1,0 +1,41 @@
+# LG webOS TV - ACR / telemetry / ad-tech / cloud phone-home
+# Format: Pi-hole ABP-style (||domain^ = domain + all subdomains). Pi-hole v5.x+/v6.
+# Safe to apply to ALL clients: nothing here is used by non-LG devices except
+# conviva/wurl (video analytics + FAST ad-tech), which are blocked deliberately.
+# Source: Pi-hole query review 2026-09-09, 71 days of TV traffic.
+
+# ACR (Automatic Content Recognition) - Alphonso = LG Ad Solutions
+||alphonso.tv^
+||lgads.tv^
+||lgad.com^
+
+# LG advertising
+||lgsmartad.com^
+||lgadmarket.com^
+
+# LG customer data platform, recommendations, nudges, remote config, log upload
+# (aic.cdpsvc / cdpbeacon / cdpbeacon2 / cdplauncher / nudge / recommend /
+#  wiseconfig / rdl / netflixvoice / lgchhomeapp)
+||lgtvcommon.com^
+
+# LG ThinQ cloud (IoT control, Sports Alert, OCP) - not needed for HDMI/CEC
+||lgtviot.com^
+||lgthinq.com^
+
+# Remote Diagnostics eXchange - device log upload
+||rdx2.lgtvsdp.com^
+||rdx.lgtvsdp.com^
+
+# LG Content Store / app billing + promo surface
+||lgappstv.com^
+
+# Video QoE analytics beacons (streaming apps, LG Channels)
+||conviva.com^
+
+# LG Channels FAST ad-tech / stream telemetry
+||wurl.com^
+||transmit.live^
+
+# Universal Electronics (QuickSet/Nevo) IoT hub - TV pushes device inventory
+||nevoai-iothub-57-prod.azure-devices.net^
+/^nevoai-iothub-\d+-prod\.azure-devices\.net$/
