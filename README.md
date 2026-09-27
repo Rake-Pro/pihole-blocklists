@@ -1,6 +1,6 @@
 # pihole-blocklists
 
-Pi-hole adlists maintained for the rake.pro homelab. ABP-style entries (`||domain^`), so each line covers the domain and all subdomains. Works on Pi-hole v5.x and v6.
+Pi-hole adlists for smart-TV and IoT telemetry. ABP-style entries (`||domain^`), so each line covers the domain and all subdomains. Works on Pi-hole v5.x and v6.
 
 ## Lists
 
