@@ -38,3 +38,9 @@
 
 # Universal Electronics (QuickSet/Nevo) IoT hub - TV pushes device inventory
 ||nevoai-iothub-57-prod.azure-devices.net^
+
+# webOS 25 (fw 33.x, 2026-10) successor hosts. Exact hosts, not zones:
+# us.nextlgsdp.com is the new SDP heartbeat / time source, and
+# ngfts/aic-gfts.tv.wiselg.com carry firmware downloads - both must stay allowed.
+us.ibs.nextlgsdp.com
+aic.tv.wiselg.com
